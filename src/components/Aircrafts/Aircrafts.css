@@ -1,0 +1,7 @@
+.aircrafts {
+    height: calc(100vh - 15rem);
+    width: calc(25vh);
+    padding-top: 10px;
+    background-color: lavender;
+    margin-right: 20px;
+}
