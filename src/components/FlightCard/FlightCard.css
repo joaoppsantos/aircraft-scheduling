@@ -1,0 +1,29 @@
+body {
+    --card-bg-color: #add8e6;
+    --hover-bg-color: #95d3e7;
+}
+
+.flight-card {
+    height: 9vh;
+    width: 100%;
+
+    font-size: 17px;
+    margin-top: 15px;
+
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--card-bg-color);
+    align-items: center;
+    flex-direction: column;
+}
+
+.flight-card:hover {
+    background-color: var(--hover-bg-color);
+}
+
+.flight-id {
+    position: relative;
+    font-size: 12px;
+    align-self: flex-start;
+    padding: 5px;
+}

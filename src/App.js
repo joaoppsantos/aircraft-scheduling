@@ -1,18 +1,29 @@
 import './App.css';
+import { AircraftProvider } from './contexts/AircraftContext';
+import { FlightProvider } from './contexts/FlightContext';
 import { NavDate, Aircrafts, Flight, Rotation } from './components';
 
 function App() {
+	const mainComponents = [<Aircrafts />, <Rotation />, <Flight />];
+
 	return (
-		<div className="App">
-			<div className="nav-date">
-				<NavDate />
-			</div>
-			<div className="main-container">
-				<Aircrafts />
-				<Rotation />
-				<Flight />
-			</div>
-		</div>
+		<FlightProvider>
+			<AircraftProvider>
+				<div className="app">
+					<div className="nav-date">
+						<NavDate />
+					</div>
+					<div className="main-container">
+						{mainComponents.map((component, index) => (
+								<div key={index} className="element-container">
+									{component}
+								</div>
+							)
+						)}
+					</div>
+				</div>
+			</AircraftProvider>
+		</FlightProvider>
 	);
 }
 

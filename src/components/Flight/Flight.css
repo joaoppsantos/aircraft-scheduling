@@ -1,7 +1,21 @@
+.flight::-webkit-scrollbar {
+    display: none;
+}
+
 .flight {
     height: calc(100vh - 15rem);
     width: calc(25vh);
     padding-top: 10px;
     background-color: lavender;
     margin-right: 20px;
+    overflow-y: scroll;
+
+    scrollbar-width: none; 
+}
+
+@media screen and (max-width: 670px) {
+	.flight {
+        width: 90%;
+        margin: 0 auto;
+	}
 }

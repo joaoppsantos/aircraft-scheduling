@@ -1,0 +1,12 @@
+.aircraft-card {
+    height: 10vh;
+    width: 100%;
+    font-size: 24px;
+    margin-top: 14px;
+    background-color: lightblue;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

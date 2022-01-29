@@ -5,3 +5,13 @@
     background-color: lavender;
     margin-right: 20px;
 }
+
+@media screen and (max-width: 670px) {
+	.aircrafts {
+        height: calc(100vh - 15rem);
+        width: 90%;
+        padding-top: 10px;
+        background-color: lavender;
+        margin: 0 auto;
+	}
+}
