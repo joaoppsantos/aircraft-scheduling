@@ -3,16 +3,34 @@ import { useContext } from 'react';
 import { FlightContext } from '../../contexts/FlightContext';
 
 const FlightCard = flight => {
-	const { flights, toggleActiveFlight } = useContext(FlightContext);
+	const { activeFlights, toggleActiveFlight } = useContext(FlightContext);
 
 	const handleCardClick = () => {
-		// verificar se o schedule já está ocupado
-		// verificar se o aeroporto de destino foi o último
-		// verificar se já passaram 20 minutos do último vôo
+		let lastFlight = activeFlights[activeFlights.length - 1];
+		let twentyMinutes = 1200; // 20 * 60
+		let isFlightToggled = false;
 
-		
+		activeFlights.forEach(activeFlight => {
+			if (activeFlight.id === flight.id) {
+				toggleActiveFlight(flight);
+				isFlightToggled = true;
+			}
+		});
 
-		toggleActiveFlight(flight);
+		if (!!isFlightToggled) {
+			return;
+		}
+
+		if (lastFlight === undefined) {
+			toggleActiveFlight(flight);
+		} 
+		else if (lastFlight?.arrivaltime + twentyMinutes < flight.departuretime &&
+				lastFlight?.destination === flight?.origin) {
+			toggleActiveFlight(flight);
+		}
+		else {
+			alert('Invalid Rotation');
+		}
 	};
 
 	return (
