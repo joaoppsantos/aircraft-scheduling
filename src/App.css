@@ -20,6 +20,13 @@
 	display: flex;
 }
 
+.schedule-container {
+	width: 96vh;
+	justify-content: center;
+	display: flex;
+	margin: 0 auto;
+}
+
 .element-container {
 	margin-bottom: 20px;
 }

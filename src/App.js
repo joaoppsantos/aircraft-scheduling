@@ -1,7 +1,7 @@
 import './App.css';
 import { AircraftProvider } from './contexts/AircraftContext';
 import { FlightProvider } from './contexts/FlightContext';
-import { NavDate, Aircrafts, Flight, Rotation } from './components';
+import { Schedule, NavDate, Aircrafts, Flight, Rotation } from './components';
 
 function App() {
 	const mainComponents = [<Aircrafts />, <Rotation />, <Flight />];
@@ -20,6 +20,9 @@ function App() {
 								</div>
 							)
 						)}
+					</div>
+					<div className="schedule-container" id="schedule_id">
+						<Schedule />
 					</div>
 				</div>
 			</AircraftProvider>

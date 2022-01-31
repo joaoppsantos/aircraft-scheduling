@@ -1,0 +1,22 @@
+.schedule {
+    height: 4vh;
+    width: 100%;
+    background-color: lavender;
+    display: flex;
+}
+
+.hour-schedule {
+    height: 4vh;
+    width: 4vh;
+    border: 1px solid dimgrey;
+    /* 
+        width: calc(4vh * 0.7);
+        left: calc(4vh * 0.3);
+    */
+}
+
+@media screen and (max-width: 670px) {
+	.schedule {
+        margin: 0 auto;
+	}
+}
