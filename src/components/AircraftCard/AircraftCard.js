@@ -22,12 +22,13 @@ const AircraftCard = aircraft => {
 
 	useEffect(() => {
 		sumPercentage = 0;
+
 		activeFlights.forEach(flight => {
-			console.log(flight, ' activeFlights');
 			flightTime = flight.arrivaltime - flight.departuretime;
 
 			sumPercentage += (flightTime/secondsInADay) * 100;
 		})
+
 		setPercentage(Math.round(sumPercentage));
 	}, [activeFlights])
 	

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AircraftCard /> should render correctly 1`] = `
+<div>
+  <div
+    class="aircraft-card"
+  >
+    <span>
+      GABCD
+    </span>
+    <span>
+      50
+      %
+    </span>
+  </div>
+</div>
+`;
