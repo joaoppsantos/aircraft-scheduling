@@ -24,8 +24,6 @@ const Schedule = () => {
 
             //document.getElementById('hour_5').setAttribute("style","background-color:red; width: calc(4vh * 0.7)");
         })
-
-        console.log(offsetLeft, offsetWidth);
 	}, [activeFlights])
 
     return (

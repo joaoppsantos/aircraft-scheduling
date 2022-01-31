@@ -6,9 +6,10 @@ const FlightCard = flight => {
 	const { activeFlights, toggleActiveFlight } = useContext(FlightContext);
 
 	const handleCardClick = () => {
-		let lastFlight = activeFlights[activeFlights.length - 1];
-		let twentyMinutes = 1200; // 20 * 60
-		let isFlightToggled = false;
+		let firstFlight = activeFlights[0],
+			lastFlight = activeFlights[activeFlights.length - 1],
+			twentyMinutes = 1200, // 20 * 60
+			isFlightToggled = false;
 
 		activeFlights.forEach(activeFlight => {
 			if (activeFlight.id === flight.id) {
@@ -24,8 +25,12 @@ const FlightCard = flight => {
 		if (lastFlight === undefined) {
 			toggleActiveFlight(flight);
 		} 
-		else if (lastFlight?.arrivaltime + twentyMinutes < flight.departuretime &&
+		else if (lastFlight?.arrivaltime + twentyMinutes < flight?.departuretime &&
 				lastFlight?.destination === flight?.origin) {
+			toggleActiveFlight(flight);
+		}
+		else if (firstFlight?.departuretime - twentyMinutes > flight?.arrivaltime &&
+				firstFlight?.origin === flight?.destination) {
 			toggleActiveFlight(flight);
 		}
 		else {

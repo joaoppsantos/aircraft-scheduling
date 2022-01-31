@@ -47,6 +47,18 @@ export function FlightProvider({ children }) {
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [flights, hasFlightsRemaining]);
 
+	useEffect(() => {
+		activeFlights.sort((first, second) => {
+			if (first.departuretime < second.departuretime) {
+				return -1;
+			}
+			else if (first.departuretime > second.departuretime) {
+				return 1;
+			}
+			return 0;
+		});
+	}, [activeFlights]);
+
 	return (
 		<FlightContext.Provider value={{
 			flights,
