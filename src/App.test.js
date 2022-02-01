@@ -4,6 +4,15 @@ import App from './App';
 import { AircraftContext } from './contexts/AircraftContext';
 import { FlightContext } from './contexts/FlightContext';
 
+beforeAll(() => {
+    jest.useFakeTimers('modern');
+    jest.setSystemTime(new Date(2022, 1, 1));
+});
+
+afterAll(() => {
+    jest.useRealTimers();
+});
+
 const flightMock = {
 	"id": "AS1001",
 	"departuretime": 21600,

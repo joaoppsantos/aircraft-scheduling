@@ -9,7 +9,7 @@ exports[`<App /> should render correctly 1`] = `
       class="nav-date"
     >
       <div>
-        Mon, January 31, 2022
+        Tue, February 1, 2022
       </div>
     </div>
     <div
@@ -49,103 +49,128 @@ exports[`<App /> should render correctly 1`] = `
     >
       <div
         class="schedule"
+        id="schedule"
       >
-        <div
+        <span
           class="hour-schedule"
-          id="hour_0"
-        />
-        <div
+        >
+          0
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_1"
-        />
-        <div
+        >
+          1
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_2"
-        />
-        <div
+        >
+          2
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_3"
-        />
-        <div
+        >
+          3
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_4"
-        />
-        <div
+        >
+          4
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_5"
-        />
-        <div
+        >
+          5
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_6"
-        />
-        <div
+        >
+          6
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_7"
-        />
-        <div
+        >
+          7
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_8"
-        />
-        <div
+        >
+          8
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_9"
-        />
-        <div
+        >
+          9
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_10"
-        />
-        <div
+        >
+          10
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_11"
-        />
-        <div
+        >
+          11
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_12"
-        />
-        <div
+        >
+          12
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_13"
-        />
-        <div
+        >
+          13
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_14"
-        />
-        <div
+        >
+          14
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_15"
-        />
-        <div
+        >
+          15
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_16"
-        />
-        <div
+        >
+          16
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_17"
-        />
-        <div
+        >
+          17
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_18"
-        />
-        <div
+        >
+          18
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_19"
-        />
-        <div
+        >
+          19
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_20"
-        />
-        <div
+        >
+          20
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_21"
-        />
-        <div
+        >
+          21
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_22"
-        />
-        <div
+        >
+          22
+        </span>
+        <span
           class="hour-schedule"
-          id="hour_23"
-        />
+        >
+          23
+        </span>
       </div>
     </div>
   </div>
