@@ -3,16 +3,7 @@ import { render } from '@testing-library/react';
 import Aircrafts from '../Aircrafts';
 import { AircraftContext } from '../../../contexts/AircraftContext';
 import { FlightContext } from '../../../contexts/FlightContext';
-
-const flightMock = {
-    "id": "AS1001",
-    "departuretime": 21600,
-    "arrivaltime": 26100,
-    "readable_departure": "06:00",
-    "readable_arrival": "07:15",
-    "origin": "LFSB",
-    "destination": "LFMN"
-};
+import { aircraftMock, flightMock } from '../../../tests/mocks/mocks';
 
 describe('<Aircrafts />', () => {
     it('should render correctly', () => {
@@ -23,12 +14,7 @@ describe('<Aircrafts />', () => {
         };
         const mockAircraftContext = {
             aircrafts: [
-                {
-                    "ident": "GABCD",
-                    "type": "A320",
-                    "economySeats": 186,
-                    "base": "EGKK"
-                }
+                aircraftMock
             ],
             selectAircraft: jest.fn(),
             currentPercentage: "50",

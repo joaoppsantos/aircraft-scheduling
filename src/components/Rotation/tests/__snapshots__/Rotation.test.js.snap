@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Rotation /> should render correctly 1`] = `
+<div>
+  <div
+    class="rotation"
+  >
+    Rotation
+    <div>
+      <div
+        class="flight-card"
+      >
+        <span
+          class="flight-id"
+        >
+          AS1001
+        </span>
+        <span>
+          LFSB
+           
+          &gt;
+           
+          LFMN
+        </span>
+        <span>
+          06:00
+           
+          &gt;
+           
+          07:15
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

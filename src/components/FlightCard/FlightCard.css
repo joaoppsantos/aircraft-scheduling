@@ -11,7 +11,6 @@ body {
     margin-top: 15px;
 
     display: flex;
-    flex-wrap: wrap;
     background-color: var(--card-bg-color);
     align-items: center;
     flex-direction: column;
@@ -22,7 +21,6 @@ body {
 }
 
 .flight-id {
-    position: relative;
     font-size: 12px;
     align-self: flex-start;
     padding: 5px;

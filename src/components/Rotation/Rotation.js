@@ -3,7 +3,6 @@ import { useContext } from 'react';
 import { FlightContext } from '../../contexts/FlightContext';
 import { FlightCard } from '../FlightCard/';
 
-
 const Rotation = () => {
     const {
         activeFlights,

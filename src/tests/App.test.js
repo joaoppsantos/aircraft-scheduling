@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
-import { AircraftContext } from './contexts/AircraftContext';
-import { FlightContext } from './contexts/FlightContext';
+import App from '../App';
+import { AircraftContext } from '../contexts/AircraftContext';
+import { FlightContext } from '../contexts/FlightContext';
+import { aircraftMock, flightMock } from '../tests/mocks/mocks';
 
 beforeAll(() => {
     jest.useFakeTimers('modern');
@@ -12,22 +13,6 @@ beforeAll(() => {
 afterAll(() => {
     jest.useRealTimers();
 });
-
-const flightMock = {
-	"id": "AS1001",
-	"departuretime": 21600,
-	"arrivaltime": 26100,
-	"readable_departure": "06:00",
-	"readable_arrival": "07:15",
-	"origin": "LFSB",
-	"destination": "LFMN"
-};
-const mockAircraftProps = {
-	ident: "GABCD",
-	economySeats: 186,
-	base: "EGKK",
-	type: "A320",
-};
 
 describe('<App />', () => {
 	it('should render correctly', () => {
@@ -45,7 +30,7 @@ describe('<App />', () => {
 		const { container } = render(
 			<AircraftContext.Provider value={mockAircraftContext}>
 				<FlightContext.Provider value={mockFlightContext}>
-					<App {...mockAircraftProps} />
+					<App {...aircraftMock} />
 				</FlightContext.Provider>
 			</AircraftContext.Provider>
 		);
