@@ -128,7 +128,11 @@ exports[`<Schedule /> should render correctly 1`] = `
     </span>
     <div
       id="AS1001"
-      style="background-color: #add8e6; height: 35px; margin-top: 3px; position: absolute; width: NaNpx; left: NaNpx;"
+      style="background-color: #6fdb95; height: 35px; margin-top: 3px; position: absolute; width: NaNpx; left: NaNpx;"
+    />
+    <div
+      id="AS1001"
+      style="background-color: #ae59e3; height: 35px; margin-top: 3px; position: absolute; width: 15px; left: NaNpx;"
     />
   </div>
 </div>

@@ -26,15 +26,19 @@ const Schedule = () => {
         activeFlights.forEach(flight => {
             let departureWidth = convertInHours(flight.departuretime),
                 arrivalWidth = convertInHours(flight.arrivaltime),
-                elementDiv = document.createElement("div");
+                scheduledService = document.createElement("div"),
+                turnaroundTime = document.createElement("div");
 
             let setDepartureWidth = offsetWidth / 24 * departureWidth + offsetLeft,
                 setArrivalWidth = offsetWidth / 24 * arrivalWidth + offsetLeft,
-                flightWidth = (setArrivalWidth - setDepartureWidth) + 15;
+                flightWidth = (setArrivalWidth - setDepartureWidth);
 
-            elementDiv.setAttribute("id", flight.id);
-            elementDiv.setAttribute("style", "background-color: #add8e6; height: 35px; margin-top: 3px; position: absolute; width: "+flightWidth+"px; left: "+setDepartureWidth+"px;");
-            document.getElementById("schedule").appendChild(elementDiv);
+            scheduledService.setAttribute("id", flight.id);
+            turnaroundTime.setAttribute("id", flight.id);
+            scheduledService.setAttribute("style", "background-color: #6fdb95; height: 35px; margin-top: 3px; position: absolute; width: "+flightWidth+"px; left: "+setDepartureWidth+"px;");
+            turnaroundTime.setAttribute("style", "background-color: #ae59e3; height: 35px; margin-top: 3px; position: absolute; width: "+15+"px; left: "+setArrivalWidth+"px;");
+            document.getElementById("schedule").appendChild(scheduledService);
+            document.getElementById("schedule").appendChild(turnaroundTime);
         })
 	}, [activeFlights])
 
