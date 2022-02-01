@@ -8,7 +8,9 @@ exports[`<AircraftCard /> should render correctly 1`] = `
     <span>
       GABCD
     </span>
-    <span>
+    <span
+      class="percentage"
+    >
       50
       %
     </span>

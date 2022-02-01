@@ -1,7 +1,7 @@
 .aircraft-card {
     height: 10vh;
     width: 100%;
-    font-size: 24px;
+    font-size: 26px;
     margin-top: 14px;
     background-color: lightblue;
 
@@ -9,4 +9,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.percentage {
+    font-size: 19px;
+    padding-top: 5px;
 }

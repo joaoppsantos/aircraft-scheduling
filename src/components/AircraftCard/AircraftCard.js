@@ -35,7 +35,7 @@ const AircraftCard = aircraft => {
 	return (
 		<div className="aircraft-card" onClick={handleAircraftClick}> 
 			<span>{aircraft?.ident}</span>
-			<span>{currentPercentage}%</span>
+			<span className="percentage">{currentPercentage}%</span>
 		</div>
 	);
 }
